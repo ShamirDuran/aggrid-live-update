@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgGrid Live</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .badge {
+        color: #3498db;
+        font-size: 1.2rem;
+    }
+
+    .success {
+        color: #2ecc71;
+    }
+
+    .error {
+        color: #e74c3c;
+    }
+</style>
+
+<body style="padding: 15px" class="animate__fadeIn">
+    <header style="display: flex; justify-content: space-between;">
+        <h1>AG Grid - Live Update</h1>
+
+        <div title="Enviar" onclick="sendData()" style="position: relative; display: inline-flex; justify-content: center; align-items: center; cursor: pointer;">
+            <div style="background-color: #008000; height: 30px; width: 30px; opacity: 0.2; border-radius: 100%;"></div>
+            <i class="fas fa-paper-plane" style="position: absolute; color: #008000; font-size: 1.1rem; padding-right: 3px; padding-top: 3px;"></i>
+        </div>
+    </header>
+
+    <main>
+        <div id="myGrid" style="width:100%; height: 480px;" class="ag-theme-alpine"></div>
+    </main>
+</body>
+
+</html>
